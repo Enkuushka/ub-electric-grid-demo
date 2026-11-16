@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>UB Grid Monitor — Ulaanbaatar electric grid</title>
+  <meta name="description" content="Map-based monitoring demo for the Ulaanbaatar electric grid: transmission lines, substations, switching and outage tracing.">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+
+  <header id="topbar">
+    <button id="menuBtn" class="icon-btn" aria-label="Toggle sidebar" aria-controls="side">☰</button>
+    <div class="brand">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z" fill="currentColor"/></svg>
+      <div>
+        <strong>UB Grid Monitor</strong>
+        <span>Ulaanbaatar distribution network · demo</span>
+      </div>
+    </div>
+    <div id="kpis" aria-live="polite">
+      <div class="kpi"><span>Load served</span><b id="kLoad">–</b></div>
+      <div class="kpi"><span>Customers online</span><b id="kOn">–</b></div>
+      <div class="kpi" id="kOffBox"><span>Without power</span><b id="kOff">–</b></div>
+      <div class="kpi" id="kFaultBox"><span>Active faults</span><b id="kFault">–</b></div>
+      <div class="kpi" id="kAbnBox"><span>Abnormal switches</span><b id="kAbn">–</b></div>
+    </div>
+    <div class="top-right">
+      <span id="sysState" class="pill">–</span>
+      <span id="clock" title="Ulaanbaatar time">–</span>
+      <button id="resetBtn" class="btn ghost" title="Restore the opening scenario">Reset demo</button>
+    </div>
+  </header>
+
+  <aside id="side" aria-label="Network overview">
+    <section>
+      <h2>Detail level <small id="zoomVal"></small></h2>
+      <ol id="levels">
+        <li data-z="12"><i></i><div><b>Transmission</b><span>220 / 110 kV grid, power plants</span></div></li>
+        <li data-z="13"><i></i><div><b>Sub-transmission</b><span>+ 35 kV lines and substations</span></div></li>
+        <li data-z="15"><i></i><div><b>Distribution</b><span>+ 10 kV feeders, transformer points</span></div></li>
+        <li data-z="17"><i></i><div><b>Street &amp; yard</b><span>+ 0.4 kV services, inside substations</span></div></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Legend &amp; layers</h2>
+      <div id="layers"></div>
+      <ul class="legend">
+        <li><svg width="44" height="10"><line x1="2" y1="5" x2="42" y2="5" class="lg-live"/></svg>Live — coloured by voltage</li>
+        <li><svg width="44" height="10"><line x1="2" y1="5" x2="42" y2="5" class="lg-dead"/></svg>De-energised (cut off upstream)</li>
+        <li><svg width="44" height="10"><line x1="2" y1="5" x2="42" y2="5" class="lg-fault"/><text x="22" y="9" class="lg-x">✕</text></svg>Faulted / cut cable</li>
+        <li><svg width="44" height="14"><rect x="6" y="2" width="10" height="10" rx="1.5" class="lg-closed"/><rect x="28" y="2" width="10" height="10" rx="1.5" class="lg-open"/></svg>Switch closed / open</li>
+        <li><svg width="44" height="14"><rect x="17" y="2" width="10" height="10" rx="1.5" class="lg-open lg-abn"/></svg>Not in its normal position</li>
+      </ul>
+      <div class="basemap">
+        <label for="basemap">Basemap</label>
+        <select id="basemap">
+          <option value="dark">Dark</option>
+          <option value="streets">Streets (OSM)</option>
+          <option value="sat">Satellite</option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <h2>Plants &amp; substations</h2>
+      <div id="stationList"></div>
+    </section>
+
+    <section>
+      <h2>Event log</h2>
+      <ul id="log"></ul>
+    </section>
+  </aside>
+
+  <main id="map" aria-label="Grid map of Ulaanbaatar"></main>
+
+  <aside id="panel" hidden aria-label="Substation detail"></aside>
+
+  <div id="toast" role="status" hidden></div>
+</div>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="js/network.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
