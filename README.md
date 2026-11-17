@@ -1,7 +1,7 @@
 # UB Grid Monitor
 
 Map-based monitoring demo for the Ulaanbaatar electric grid, aimed at field electricians and dispatchers.
-Static site: no build step and no backend.
+Static site: no build step and no backend. The interface is in Mongolian.
 
 ![Overview](docs/overview.png)
 ![Switching inside a substation](docs/switching.png)

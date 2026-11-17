@@ -35,33 +35,33 @@
   /* ---------- static definitions (positions are approximate) ---------- */
 
   var STATIONS = [
-    { id: 'chp4', kind: 'plant', name: 'CHP-4', sub: 'Thermal Power Plant No. 4', pos: [47.8935, 106.8040], buses: [220, 110],
-      gens: [['TG-1', 100], ['TG-2', 100], ['TG-3', 100], ['TG-4', 123], ['TG-5', 123]] },
-    { id: 'chp3', kind: 'plant', name: 'CHP-3', sub: 'Thermal Power Plant No. 3', pos: [47.8958, 106.8470], buses: [110],
-      gens: [['TG-1', 48], ['TG-2', 50], ['TG-3', 50], ['TG-4', 50]] },
-    { id: 'chp2', kind: 'plant', name: 'CHP-2', sub: 'Thermal Power Plant No. 2', pos: [47.9080, 106.7830], buses: [35],
-      gens: [['TG-1', 12], ['TG-2', 9]] },
-    { id: 'tie', kind: 'tie', name: 'Central Grid Tie', sub: '220 kV interconnection towards Darkhan / Erdenet', pos: [47.9500, 106.6900], buses: [220],
-      gens: [['CES infeed', 300]] },
+    { id: 'chp4', kind: 'plant', name: 'ДЦС-4', sub: 'Дулааны цахилгаан станц №4', pos: [47.8935, 106.8040], buses: [220, 110],
+      gens: [['ТГ-1', 100], ['ТГ-2', 100], ['ТГ-3', 100], ['ТГ-4', 123], ['ТГ-5', 123]] },
+    { id: 'chp3', kind: 'plant', name: 'ДЦС-3', sub: 'Дулааны цахилгаан станц №3', pos: [47.8958, 106.8470], buses: [110],
+      gens: [['ТГ-1', 48], ['ТГ-2', 50], ['ТГ-3', 50], ['ТГ-4', 50]] },
+    { id: 'chp2', kind: 'plant', name: 'ДЦС-2', sub: 'Дулааны цахилгаан станц №2', pos: [47.9080, 106.7830], buses: [35],
+      gens: [['ТГ-1', 12], ['ТГ-2', 9]] },
+    { id: 'tie', kind: 'tie', name: 'Системийн холбоос', sub: 'Дархан / Эрдэнэт чиглэлийн 220 кВ холбоос', pos: [47.9500, 106.6900], buses: [220],
+      gens: [['ТЭХС-ийн тэжээл', 300]] },
 
-    { id: 'songino', kind: 'ss', name: 'Songino', pos: [47.9210, 106.7380], buses: [220, 110] },
-    { id: 'east', kind: 'ss', name: 'Züün (East)', pos: [47.9230, 107.0420], buses: [220, 110] },
+    { id: 'songino', kind: 'ss', name: 'Сонгино', pos: [47.9210, 106.7380], buses: [220, 110] },
+    { id: 'east', kind: 'ss', name: 'Зүүн', pos: [47.9230, 107.0420], buses: [220, 110] },
 
-    { id: 'tolgoit', kind: 'ss', name: 'Tolgoit', pos: [47.9290, 106.8010], buses: [110, 35, 10], feeders: 6, area: 'mixed' },
-    { id: 'bayangol', kind: 'ss', name: 'Bayangol', pos: [47.9135, 106.8640], buses: [110, 10], feeders: 6, area: 'urban' },
-    { id: 'tuv', kind: 'ss', name: 'Töv (Central)', pos: [47.9215, 106.9120], buses: [110, 10], feeders: 6, area: 'urban' },
-    { id: 'selbe', kind: 'ss', name: 'Selbe', pos: [47.9440, 106.9230], buses: [110, 35, 10], feeders: 5, area: 'mixed' },
-    { id: 'bzd', kind: 'ss', name: 'Bayanzürkh', pos: [47.9170, 106.9700], buses: [110, 10], feeders: 6, area: 'urban' },
-    { id: 'amgalan', kind: 'ss', name: 'Amgalan', pos: [47.9105, 107.0050], buses: [110, 35, 10], feeders: 5, area: 'mixed' },
-    { id: 'khanuul', kind: 'ss', name: 'Khan-Uul', pos: [47.8840, 106.9010], buses: [110, 35, 10], feeders: 5, area: 'urban' },
-    { id: 'yarmag', kind: 'ss', name: 'Yarmag', pos: [47.8705, 106.8250], buses: [110, 10], feeders: 5, area: 'mixed' },
+    { id: 'tolgoit', kind: 'ss', name: 'Толгойт', pos: [47.9290, 106.8010], buses: [110, 35, 10], feeders: 6, area: 'mixed' },
+    { id: 'bayangol', kind: 'ss', name: 'Баянгол', pos: [47.9135, 106.8640], buses: [110, 10], feeders: 6, area: 'urban' },
+    { id: 'tuv', kind: 'ss', name: 'Төв', pos: [47.9215, 106.9120], buses: [110, 10], feeders: 6, area: 'urban' },
+    { id: 'selbe', kind: 'ss', name: 'Сэлбэ', pos: [47.9440, 106.9230], buses: [110, 35, 10], feeders: 5, area: 'mixed' },
+    { id: 'bzd', kind: 'ss', name: 'Баянзүрх', pos: [47.9170, 106.9700], buses: [110, 10], feeders: 6, area: 'urban' },
+    { id: 'amgalan', kind: 'ss', name: 'Амгалан', pos: [47.9105, 107.0050], buses: [110, 35, 10], feeders: 5, area: 'mixed' },
+    { id: 'khanuul', kind: 'ss', name: 'Хан-Уул', pos: [47.8840, 106.9010], buses: [110, 35, 10], feeders: 5, area: 'urban' },
+    { id: 'yarmag', kind: 'ss', name: 'Яармаг', pos: [47.8705, 106.8250], buses: [110, 10], feeders: 5, area: 'mixed' },
 
-    { id: 'bayankhoshuu', kind: 'ss', name: 'Bayankhoshuu', pos: [47.9490, 106.8330], buses: [35, 10], feeders: 4, area: 'ger' },
-    { id: 'chingeltei', kind: 'ss', name: 'Chingeltei', pos: [47.9520, 106.8870], buses: [35, 10], feeders: 4, area: 'ger' },
-    { id: 'dariekh', kind: 'ss', name: 'Dari-Ekh', pos: [47.9450, 106.9620], buses: [35, 10], feeders: 4, area: 'ger' },
-    { id: 'zaisan', kind: 'ss', name: 'Zaisan', pos: [47.8830, 106.9330], buses: [35, 10], feeders: 4, area: 'urban' },
-    { id: 'uildver', kind: 'ss', name: 'Üildver (Industrial)', pos: [47.9040, 106.8330], buses: [35, 10], feeders: 4, area: 'ind' },
-    { id: 'uliastai', kind: 'ss', name: 'Uliastai', pos: [47.9330, 107.0300], buses: [35, 10], feeders: 4, area: 'ger' }
+    { id: 'bayankhoshuu', kind: 'ss', name: 'Баянхошуу', pos: [47.9490, 106.8330], buses: [35, 10], feeders: 4, area: 'ger' },
+    { id: 'chingeltei', kind: 'ss', name: 'Чингэлтэй', pos: [47.9520, 106.8870], buses: [35, 10], feeders: 4, area: 'ger' },
+    { id: 'dariekh', kind: 'ss', name: 'Дарь-Эх', pos: [47.9450, 106.9620], buses: [35, 10], feeders: 4, area: 'ger' },
+    { id: 'zaisan', kind: 'ss', name: 'Зайсан', pos: [47.8830, 106.9330], buses: [35, 10], feeders: 4, area: 'urban' },
+    { id: 'uildver', kind: 'ss', name: 'Үйлдвэр', pos: [47.9040, 106.8330], buses: [35, 10], feeders: 4, area: 'ind' },
+    { id: 'uliastai', kind: 'ss', name: 'Улиастай', pos: [47.9330, 107.0300], buses: [35, 10], feeders: 4, area: 'ger' }
   ];
 
   var LINES = [
@@ -96,15 +96,15 @@
   ];
 
   var CONSUMER_TYPES = {
-    apt:      { label: 'Apartment block',        cust: [60, 160], kwPer: 1.3 },
-    ger:      { label: 'Ger district street',    cust: [25, 70],  kwPer: 0.9 },
-    shop:     { label: 'Shops & offices',        cust: [4, 18],   kwPer: 6 },
-    factory:  { label: 'Workshop / factory',     cust: [1, 3],    kwPer: 90 },
-    school:   { label: 'School',                 cust: [1, 1],    kwPer: 80 },
-    kinder:   { label: 'Kindergarten',           cust: [1, 1],    kwPer: 40 },
-    hospital: { label: 'Hospital / clinic',      cust: [1, 1],    kwPer: 160, critical: true },
-    pump:     { label: 'Water & heat pump station', cust: [1, 1], kwPer: 90,  critical: true },
-    light:    { label: 'Street lighting',        cust: [1, 1],    kwPer: 15 }
+    apt:      { label: 'Орон сууцны байр',        cust: [60, 160], kwPer: 1.3 },
+    ger:      { label: 'Гэр хорооллын гудамж',    cust: [25, 70],  kwPer: 0.9 },
+    shop:     { label: 'Дэлгүүр, оффис',        cust: [4, 18],   kwPer: 6 },
+    factory:  { label: 'Цех / үйлдвэр',     cust: [1, 3],    kwPer: 90 },
+    school:   { label: 'Сургууль',                 cust: [1, 1],    kwPer: 80 },
+    kinder:   { label: 'Цэцэрлэг',           cust: [1, 1],    kwPer: 40 },
+    hospital: { label: 'Эмнэлэг',      cust: [1, 1],    kwPer: 160, critical: true },
+    pump:     { label: 'Ус, дулааны насос станц', cust: [1, 1], kwPer: 90,  critical: true },
+    light:    { label: 'Гудамжны гэрэлтүүлэг',        cust: [1, 1],    kwPer: 15 }
   };
   var AREA_MIX = {
     urban: ['apt', 'apt', 'apt', 'apt', 'apt', 'shop', 'shop', 'school', 'kinder', 'hospital', 'pump', 'light'],
@@ -149,7 +149,7 @@
     // which transmission lines land on which station bus
     var lineDefs = LINES.map(function (l, i) {
       return { id: 'L' + l[0] + '-' + (i + 1), kv: l[0], a: l[1], b: l[2], via: l[3],
-               name: l[0] + ' kV ' + defById[l[1]].name + ' – ' + defById[l[2]].name };
+               name: l[0] + ' кВ ' + defById[l[1]].name + ' – ' + defById[l[2]].name };
     });
     var landing = {};
     lineDefs.forEach(function (l) {
@@ -167,7 +167,7 @@
         id: d.id, kind: d.kind, name: d.name, sub: d.sub || '', pos: d.pos, buses: d.buses, area: d.area,
         prims: [], terms: {}, feeders: [], switches: [], busNodes: [], gens: [], lineIds: []
       };
-      st.title = d.kind === 'ss' ? d.name + ' ' + d.buses.join('/') + ' kV' : d.name;
+      st.title = d.kind === 'ss' ? d.name + ' ' + d.buses.join('/') + ' кВ' : d.name;
       net.stations[d.id] = st; net.stationList.push(st);
 
       var P = st.prims, n = d.buses.length, low = n - 1;
@@ -253,7 +253,7 @@
       });
       if (secs.length === 2) {
         var xm = (secs[0].x1 + secs[1].x0) / 2, yl = by(low), kvl = d.buses[low];
-        var bc = sw('sw:' + d.id + ':bc', { name: kvl + ' kV bus coupler', kind: 'coupler', closed: false, kv: kvl });
+        var bc = sw('sw:' + d.id + ':bc', { name: kvl + ' кВ секц хоорондын таслуур', kind: 'coupler', closed: false, kv: kvl });
         P.push({ t: 'wire', node: secs[0].node, kv: kvl, pts: [[secs[0].x1, yl], [xm - 0.25, yl]] });
         P.push({ t: 'wire', node: secs[1].node, kv: kvl, pts: [[xm + 0.25, yl], [secs[1].x0, yl]] });
         P.push({ t: 'sw', sw: bc, x: xm, y: yl, kv: kvl });
@@ -266,7 +266,7 @@
         var bn = b.bus === low ? lastSec.node : busNode(b.bus);
         if (n === 1) bn = secs[0].node;
         var ln = 'ln:' + l.id + ':' + b.ld.end;
-        var id = sw('sw:' + d.id + ':' + l.id, { name: 'Line breaker → ' + defById[b.ld.other].name, kind: 'cb', closed: true, kv: kv });
+        var id = sw('sw:' + d.id + ':' + l.id, { name: 'Шугамын таслуур → ' + defById[b.ld.other].name, kind: 'cb', closed: true, kv: kv });
         P.push({ t: 'wire', node: bn, kv: kv, pts: [[b.x, yb], [b.x, yb + 0.55]] });
         P.push({ t: 'sw', sw: id, x: b.x, y: yb + 0.8, kv: kv });
         P.push({ t: 'wire', node: ln, kv: kv, pts: [[b.x, yb + 1.05], [b.x, YT]] });
@@ -280,14 +280,15 @@
       xfs.forEach(function (x) {
         var ya = by(x.a), yb = by(x.b), ym = (ya + yb) / 2, kva = d.buses[x.a], kvb = d.buses[x.b];
         var na = busNode(x.a), nb = x.b === low ? secs[x.sec || 0].node : busNode(x.b);
+        var xl = x.n.replace('AT', 'АТ').replace(/^T/, 'Т');
         var h = 'x:' + d.id + ':' + x.n + ':h', l = 'x:' + d.id + ':' + x.n + ':l';
-        var sh = sw('sw:' + d.id + ':' + x.n + ':h', { name: x.n + ' ' + kva + ' kV breaker', kind: 'cb', closed: true, kv: kva });
-        var sl = sw('sw:' + d.id + ':' + x.n + ':l', { name: x.n + ' ' + kvb + ' kV breaker', kind: 'cb', closed: true, kv: kvb });
+        var sh = sw('sw:' + d.id + ':' + x.n + ':h', { name: xl + ' ' + kva + ' кВ таслуур', kind: 'cb', closed: true, kv: kva });
+        var sl = sw('sw:' + d.id + ':' + x.n + ':l', { name: xl + ' ' + kvb + ' кВ таслуур', kind: 'cb', closed: true, kv: kvb });
         var mva = kva === 220 ? 125 : kva === 110 ? (kvb === 35 ? 16 : 25) : 10;
         P.push({ t: 'wire', node: na, kv: kva, pts: [[x.x, ya], [x.x, ya - 0.55]] });
         P.push({ t: 'sw', sw: sh, x: x.x, y: ya - 0.8, kv: kva });
         P.push({ t: 'wire', node: h, kv: kva, pts: [[x.x, ya - 1.05], [x.x, ym + 0.5]] });
-        P.push({ t: 'xf', x: x.x, y: ym, nodeH: h, nodeL: l, kvH: kva, kvL: kvb, label: x.n, mva: mva, left: x.b !== low });
+        P.push({ t: 'xf', x: x.x, y: ym, nodeH: h, nodeL: l, kvH: kva, kvL: kvb, label: xl, mva: mva, left: x.b !== low });
         P.push({ t: 'wire', node: l, kv: kvb, pts: [[x.x, ym - 0.5], [x.x, yb + 1.05]] });
         P.push({ t: 'sw', sw: sl, x: x.x, y: yb + 0.8, kv: kvb });
         P.push({ t: 'wire', node: nb, kv: kvb, pts: [[x.x, yb + 0.55], [x.x, yb]] });
@@ -300,17 +301,17 @@
         s.xs.forEach(function (x, i) {
           if (F) {
             var fid = d.id + '-F' + (++fi), head = 'fd:' + fid;
-            var id = sw('sw:' + fid, { name: 'Feeder F-' + fi + ' breaker', kind: 'cb', closed: true, kv: kvLow, feeder: fid });
+            var id = sw('sw:' + fid, { name: 'Ф-' + fi + ' фидерийн таслуур', kind: 'cb', closed: true, kv: kvLow, feeder: fid });
             P.push({ t: 'wire', node: s.node, kv: kvLow, pts: [[x, yl2], [x, yl2 - 0.55]] });
             P.push({ t: 'sw', sw: id, x: x, y: yl2 - 0.8, kv: kvLow });
             P.push({ t: 'wire', node: head, kv: kvLow, pts: [[x, yl2 - 1.05], [x, yl2 - YT]] });
-            P.push({ t: 'term', dir: 'down', x: x, y: yl2 - YT, kv: kvLow, node: head, feeder: fid, label: 'F-' + fi });
+            P.push({ t: 'term', dir: 'down', x: x, y: yl2 - YT, kv: kvLow, node: head, feeder: fid, label: 'Ф-' + fi });
             addEdge(s.node, head, id);
-            var fd = { id: fid, name: 'F-' + fi, station: d.id, section: s.tag, head: head, sw: id, tps: [], lines: [], term: [x, yl2 - YT], idx: fi - 1 };
+            var fd = { id: fid, name: 'Ф-' + fi, station: d.id, section: s.tag, head: head, sw: id, tps: [], lines: [], term: [x, yl2 - YT], idx: fi - 1 };
             net.feeders[fid] = fd; net.feederList.push(fd); st.feeders.push(fid);
           } else if (i < G) {
             var g = d.gens[i], gn = 'g:' + d.id + ':' + i;
-            var gid = sw('sw:' + d.id + ':g' + i, { name: g[0] + ' generator breaker', kind: 'cb', closed: true, kv: kvLow });
+            var gid = sw('sw:' + d.id + ':g' + i, { name: g[0] + ' генераторын таслуур', kind: 'cb', closed: true, kv: kvLow });
             P.push({ t: 'wire', node: s.node, kv: kvLow, pts: [[x, yl2], [x, yl2 - 0.55]] });
             P.push({ t: 'sw', sw: gid, x: x, y: yl2 - 0.8, kv: kvLow });
             P.push({ t: 'wire', node: gn, kv: kvLow, pts: [[x, yl2 - 1.05], [x, yl2 - 1.4]] });
@@ -360,10 +361,10 @@
     function pick(arr) { return arr[Math.floor(rnd() * arr.length)]; }
 
     function mkTP(pos, fd, st) {
-      var id = 'TP-' + (tpNo++);
-      var tp = { id: id, pos: pos, feeder: fd.id, station: st.id, kva: pick([250, 400, 400, 630, 630, 1000]),
+      var id = 'TP-' + tpNo, nm = 'ТП-' + (tpNo++);
+      var tp = { id: id, name: nm, pos: pos, feeder: fd.id, station: st.id, kva: pick([250, 400, 400, 630, 630, 1000]),
                  mv: 'tp:' + id + ':mv', lv: 'tp:' + id + ':lv', sw: 'sw:' + id, consumers: [] };
-      addSwitch(tp.sw, { name: id + ' LV main switch', kind: 'lbs', closed: true, kv: 0.4, tp: id });
+      addSwitch(tp.sw, { name: nm + ' 0.4 кВ ерөнхий салгуур', kind: 'lbs', closed: true, kv: 0.4, tp: id });
       addEdge(tp.mv, tp.lv, tp.sw);
       net.tps[id] = tp; net.tpList.push(tp); fd.tps.push(id);
       var k = 3 + Math.floor(rnd() * 3), base = rnd() * 360;
@@ -376,7 +377,7 @@
         var c = { id: cid, pos: cp, tp: id, type: type, label: T.label, name: T.label + ' ' + cid.slice(1),
                   customers: cust, kw: Math.round(cust * T.kwPer), critical: !!T.critical, node: 'c:' + cid, line: 'SV-' + cid.slice(1) };
         net.consumers[cid] = c; net.consumerList.push(c); tp.consumers.push(cid);
-        addLine({ id: c.line, kv: 0.4, name: '0.4 kV service to ' + c.name, path: [pos, [pos[0], cp[1]], cp],
+        addLine({ id: c.line, kv: 0.4, name: c.name + ' — 0.4 кВ оролтын кабель', path: [pos, [pos[0], cp[1]], cp],
                   na: tp.lv, nb: c.node, tp: id, consumer: cid, feeder: fd.id });
       }
       return tp;
@@ -399,7 +400,7 @@
         function step(from, dx, dy, node, pre) {
           var np = off(from, dx, dy);
           var tp = mkTP(np, fd, st);
-          var ln = addLine({ id: fid + '-S' + (++sNo), kv: 10, name: '10 kV ' + d.name + ' ' + fd.name + ' · section ' + sNo,
+          var ln = addLine({ id: fid + '-S' + (++sNo), kv: 10, name: '10 кВ ' + d.name + ' ' + fd.name + ' · ' + sNo + '-р хэсэг',
                              path: (pre || [from]).concat([np]), na: node, nb: tp.mv, feeder: fid });
           fd.lines.push(ln.id);
           return tp;
@@ -442,10 +443,10 @@
       var dx = B.pos[1] >= A.pos[1] ? 1 : -1;
       var swPos = Math.abs(B.pos[1] - A.pos[1]) > 0.0004 ? off(A.pos, dx * 28, 0) : off(A.pos, 0, (B.pos[0] >= A.pos[0] ? 1 : -1) * 28);
       var x = 'tie:' + no, sid = 'sw:tie' + no;
-      addSwitch(sid, { name: 'Tie switch RMU-' + no + ' (' + net.stations[fa.station].name + ' ' + fa.name + ' ↔ ' + net.stations[fb.station].name + ' ' + fb.name + ')',
+      addSwitch(sid, { name: 'Холбоос салгуур ХС-' + no + ' (' + net.stations[fa.station].name + ' ' + fa.name + ' ↔ ' + net.stations[fb.station].name + ' ' + fb.name + ')',
                        kind: 'tie', closed: false, kv: 10, pos: swPos });
       addEdge(A.mv, x, sid);
-      var ln = addLine({ id: 'TL-' + no, kv: 10, name: '10 kV tie cable RMU-' + no, path: path, na: x, nb: B.mv, tie: sid });
+      var ln = addLine({ id: 'TL-' + no, kv: 10, name: '10 кВ холбоос кабель ХС-' + no, path: path, na: x, nb: B.mv, tie: sid });
       net.ties.push({ id: sid, pos: swPos, line: ln.id, a: fa.id, b: fb.id });
     });
 
@@ -517,12 +518,12 @@
     net.scenario = [];
     (function () {
       var l = net.lines['tuv-F3-S3'];
-      if (l) { l.fault = true; net.scenario.push({ type: 'fault', text: l.name + ' — cable fault, protection tripped', ref: l.id }); }
+      if (l) { l.fault = true; net.scenario.push({ type: 'fault', text: l.name + ' — кабелийн гэмтэл, хамгаалалт ажиллав', ref: l.id }); }
       var s = net.switches['sw:bayangol-F2'];
-      if (s) { s.closed = false; net.scenario.push({ type: 'open', text: 'Bayangol · Feeder F-2 breaker OPENED for planned maintenance', ref: s.id }); }
+      if (s) { s.closed = false; net.scenario.push({ type: 'open', text: 'Баянгол · Ф-2 фидерийн таслуур төлөвлөгөөт засвараар САЛГАГДСАН', ref: s.id }); }
       var tp = net.tps[net.feeders['selbe-F1'].tps[1]];
       var sv = net.lines[net.consumers[tp.consumers[0]].line];
-      sv.fault = true; net.scenario.push({ type: 'fault', text: sv.name + ' (' + tp.id + ') — service cable cut', ref: sv.id });
+      sv.fault = true; net.scenario.push({ type: 'fault', text: sv.name + ' (' + tp.name + ') — оролтын кабель тасарсан', ref: sv.id });
     })();
 
     net.compute();
